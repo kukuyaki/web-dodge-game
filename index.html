@@ -1,2 +1,34 @@
-<canvas id="game"></canvas>
-<script src="gg.js"></script>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Game</title>
+    <style>
+        /* 1. 移除所有預設邊距 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 2. 確保 body 填滿螢幕且不出現捲軸 */
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #101010; /* 與遊戲背景色一致 */
+        }
+
+        /* 3. 讓 Canvas 變成區塊元素，消除底部間隙 */
+        canvas {
+            display: block;
+            touch-action: none; /* 防止手機瀏覽器預設的手勢干擾遊戲 */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="game"></canvas>
+    <script src="gg.js"></script>
+</body>
+</html>
